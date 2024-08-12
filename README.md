@@ -1,2 +1,1 @@
-# my front end work space for learning CSS, tailwind, react, 
-
+# my front end work space for learning CSS, tailwind, react, nextjs
