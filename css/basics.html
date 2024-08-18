@@ -12,18 +12,42 @@
 
       p {
         border: 2px solid #3e9549;
+        margin: 2px 3px 10px 3px;
+        padding: 5px;
+      }
+
+      div {
+        border: 1px solid #3e9549;
+        margin: 2px;
+      }
+
+      div.container {
+        display: table;
+        width: 90vw;
+      }
+
+      div.container > div {
+        margin: 10px;
       }
 
       div.container1 {
         height: 500px;
         width: 500px;
-        border: 2px solid #3e9549;
+        float: left;
       }
 
-      #container2 {
+      div.container2 {
+        border: 1px solid tomato;
+        min-width: 100px;
+        min-height: 100px;
+        float: right;
+      }
+
+      #relcontainer1 {
         height: 50px;
         width: 50px;
-        border: 2px solid #da71dc;
+        border: 2px solid rgb(224, 49, 168);
+        border-radius: 50%;
         position: relative;
         top: -10px;
         right: 10px;
@@ -31,13 +55,16 @@
     </style>
   </head>
   <body>
-    <p>
+    <p style="text-transform: capitalize">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident
       autem quaerat a hic natus quis dolorem doloribus deleniti commodi,
       excepturi aut dolores nulla, ea incidunt quo totam nobis fuga.
     </p>
-    <div class="container1">
-      <div id="container2"></div>
+    <div class="container">
+      <div class="container1">
+        <div id="relcontainer1"></div>
+      </div>
+      <div class="container2"></div>
     </div>
   </body>
 </html>

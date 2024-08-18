@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selectors</title>
+    <style>
+      div {
+        border: 1px solid;
+        margin-bottom: 10px;
+      }
+
+      /* descendant selector */
+      #pdiv p {
+        color: sandybrown;
+      }
+
+      /* child selector */
+      #pdiv > p {
+        color: forestgreen;
+        font-weight: bold;
+      }
+
+      /* adjacent sibling selector */
+      span + p {
+        text-decoration: line-through;
+      }
+
+      /* general sibling selector */
+      p ~ span {
+        color: blueviolet;
+      }
+
+      /* Pseudo selector **/
+      input::placeholder {
+        color: chocolate;
+      }
+
+      ::selection {
+        background-color: greenyellow;
+        color: black;
+      }
+
+
+      button:hover {
+        background-color: burlywood;
+      }
+
+      button {
+        background-color: orangered;
+      }
+      
+      /* Attribute selector **/
+      input[type="text"] {
+        padding: 50px;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="pdiv">
+      <p>Child of pdiv</p>
+      <div>
+        <span>Inner div</span>
+        <p>Grand child of pdiv</p>
+        <section>Some section</section>
+        <span>
+          Look the styling of gerneral sibling is applied to me , but not to
+          Inner div, for styling previous elements we have to use pseudo
+          selectors
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <p>Pseudo element & Attribute selectors</p>
+      <button>Submit</button>
+      <input type="text" placeholder="email" />
+      <input type="checkbox">Choose something</input>
+    </div>
+
+
+  </body>
+</html>
