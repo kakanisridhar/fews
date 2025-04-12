@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import HelloWorld from "./lessons/Lesson1.tsx";
+import Lesson1 from "./lessons/Lesson1.tsx";
+import Lesson2 from "./lessons/Lesson2.tsx";
 import NotFoundPage from "./NotFoundPage.tsx";
 import Navbar from "./components/Navbar.tsx";
 
@@ -12,7 +13,8 @@ export default function App() {
                 </div>
                 <div className="w-3/4">
                     <Routes>
-                        <Route path="/" element={<HelloWorld />} />
+                        <Route path="/" element={<Lesson1 />} />
+                        <Route path="/lesson2" element={<Lesson2 />} />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </div>
