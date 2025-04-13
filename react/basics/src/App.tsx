@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router";
 import Lesson1 from "./lessons/Lesson1.tsx";
 import Lesson2 from "./lessons/Lesson2.tsx";
 import NotFoundPage from "./NotFoundPage.tsx";

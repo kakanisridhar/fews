@@ -1,15 +1,5 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow } from 'electron';
 import path from 'path';
-
-
-async function getSettings(event: any, args: any) {
-  function timeout(ms: number | undefined) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-  await timeout(1000);
-
-  return "hello kakani";
-}
 
 app.on('ready', () => {
   const mainWindow = new BrowserWindow({
@@ -22,8 +12,6 @@ app.on('ready', () => {
   } else {
     mainWindow.loadFile(getUIPath());
   }
-
-  ipcMain.handle("get-settings", getSettings);
 });
 
 

@@ -1,13 +1,7 @@
-import { contextBridge } from 'electron';
+import { contextBridge , ipcRenderer } from 'electron';
 
-const electronHandler = {
-    versions: 
-    {
-        node:  process.versions.node,
-        chrome: process.versions.chrome,
-        electron: process.versions.electron
-        // we can also expose variables, not just functions
-    }
+const api = {
+    serviceRequest: (topic: string, args: any[]) => ipcRenderer.invoke(topic,args)
 };
 
-contextBridge.exposeInMainWorld('electronHandler', electronHandler);
+contextBridge.exposeInMainWorld('electronApi', api);
